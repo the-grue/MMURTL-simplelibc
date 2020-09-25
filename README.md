@@ -34,10 +34,13 @@ Implemented:
 <stddef.h>
 
 <stdio.h>
+
 	char* fputs(const char* s, FILE* stream);  -> fputs.c
 
 <stdlib.h>
+
 	void exit(int status); -> exit.c
 
 <string.h>
+
 	size_t strlen(const char* cs);  -> strlen.c
