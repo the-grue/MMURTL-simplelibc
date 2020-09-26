@@ -27,6 +27,13 @@ extern FILE *stderr;
 #define	ModeRead	0
 #define	ModeModify	1
 
+/* Implemented  */
+
+int fputs(const char *s, FILE *stream);
+int puts(const char *s);
+
+/*  Not yet implemented  */
+
 extern FILE *fopen(char *name, char *mode);
 extern int fclose(FILE *stream);
 extern int remove(char *name);
@@ -35,7 +42,6 @@ extern int rename(char *oldname, char *newname);
 extern int fgetc(FILE *stream);
 extern char *fgets(char *s, long n, FILE *stream);
 
-int fputs(const char *s, FILE *stream);
 extern int fputc(long c, FILE *stream);
 
 extern int printf(char *fmt, ...);

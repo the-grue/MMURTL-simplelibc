@@ -35,7 +35,8 @@ Implemented:
 
 <stdio.h>
 
-	char* fputs(const char* s, FILE* stream);  -> fputs.c
+	int fputs(const char* s, FILE* stream);  -> fputs.c
+	int puts(const char* s);  -> puts.c
 
 <stdlib.h>
 

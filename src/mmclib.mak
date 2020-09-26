@@ -8,7 +8,7 @@ SRC =	ctype/isalnum.c ctype/isalpha.c ctype/iscntrl.c ctype/isdigit.c \
 	ctype/isgraph.c ctype/islower.c ctype/isprint.c ctype/ispunct.c \
 	ctype/isspace.c ctype/isupper.c ctype/isxdigit.c ctype/tolower.c \
 	ctype/toupper.c errno/errno.c stdio/fputs.c string/strlen.c \
-	stdlib/exit.c stdio/stdfiles.c
+	stdlib/exit.c stdio/stdfiles.c stdio/puts.c
 
 SRC2 =	startup/stdentry.c
 
