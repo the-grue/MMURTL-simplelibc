@@ -6,8 +6,6 @@
 #include <errno.h>
 #include <mmlib.h>
 
-static long error_num = 0;
-
 /********************* fputs *************************
  Writes the string pointed to by *s to file *stream
  No EOL translation is done. The terminating NULL is
