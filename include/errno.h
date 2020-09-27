@@ -9,7 +9,7 @@
 #define	EDOM		33
 #define	ERANGE		34
 #define EFPOS		35
-#define ErdDupName	226
+#define ErcDupName	226
 #define ERRMAX		227
 
 extern int errno;

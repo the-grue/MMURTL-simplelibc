@@ -37,6 +37,19 @@ Implemented:
 
 	int fputs(const char* s, FILE* stream);  -> fputs.c
 	int puts(const char* s);  -> puts.c
+	FILE *fopen(const char *name, const char *mode); -> fopen.c
+	int rename(const char *oldname, const char *newname); -> rename.c
+	int remove(const char *name);
+	int fclose(FILE *stream);
+	int fgetc(FILE *stream);
+	char *fgets(char *s, int n, FILE *stream);
+	long ftell(FILE *stream);
+	void rewind(FILE *stream);
+	int fseek(FILE *stream, long offset, int origin);
+	size_t fread(void *ptr, size_t size, size_t nobj, FILE *stream);
+	size_t fwrite(const void *ptr, size_t size, size_t nobj, FILE *stream);
+	int fputc(int c, FILE *stream);
+
 
 <stdlib.h>
 

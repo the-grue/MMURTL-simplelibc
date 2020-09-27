@@ -1,9 +1,10 @@
 #include <stdio.h>
 
-FILE _stdin = {1};
-FILE _stdout = {2};
-FILE _stderr = {2};
+FILE _Files[FOPEN_MAX] = {0,1,2};
 
-FILE *stdin = &_stdin;
-FILE *stdout = &_stdout;
-FILE *stderr = &_stderr;
+/*_Files[1].handle = 1;
+_Files[2].handle = 2;*/
+
+FILE *stdin = &_Files[1];
+FILE *stdout = &_Files[2];
+FILE *stderr = &_Files[2];

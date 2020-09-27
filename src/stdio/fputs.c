@@ -1,5 +1,5 @@
 /*
- * gcc library source for for MMURTL
+ * gcc library source for MMURTL
  */
 #include <stdio.h>
 #include <string.h>
