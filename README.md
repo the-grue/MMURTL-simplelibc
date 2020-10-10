@@ -58,3 +58,13 @@ Implemented:
 <string.h>
 
 	size_t strlen(const char* cs);  -> strlen.c
+	int strcmp(const char* cs, const char* ct); -> strcmp.c
+	int strncmp(const char* cs, const char* ct, int n); -> strncmp.c
+	char* strcpy(char* s, const char* ct); -> strcpy.c
+	char* strncpy(char* s, const char* ct, int n); -> strncpy.c
+	char* strcat(char* s, const char* ct); -> strcat.c
+	char* strncat(char* s, const char* ct, int n); -> strncat.c
+	char* strchr(const char* cs, int c); -> strchr.c
+
+
+

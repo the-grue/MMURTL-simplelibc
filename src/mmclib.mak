@@ -11,7 +11,9 @@ SRC =	ctype/isalnum.c ctype/isalpha.c ctype/iscntrl.c ctype/isdigit.c \
 	stdlib/exit.c stdio/stdfiles.c stdio/puts.c stdio/fopen.c \
 	stdio/rename.c stdio/remove.c stdio/fclose.c stdio/fgetc.c \
 	stdio/fgets.c stdio/ftell.c stdio/rewind.c stdio/fseek.c \
-	stdio/fread.c stdio/fwrite.c stdio/fputc.c
+	stdio/fread.c stdio/fwrite.c stdio/fputc.c string/strcmp.c \
+	string/strncmp.c string/strcpy.c string/strncpy.c string/strcat.c \
+	string/strncat.c string/strchr.c
 
 SRC2 =	startup/stdentry.c
 
