@@ -15,7 +15,7 @@ SRC =	ctype/isalnum.c ctype/isalpha.c ctype/iscntrl.c ctype/isdigit.c \
 	string/strncmp.c string/strcpy.c string/strncpy.c string/strcat.c \
 	string/strncat.c string/strchr.c
 
-SRC2 =	startup/stdentry.c
+SRC2 =	startup/stdentry.c startup/procparm.c
 
 OBJ = $(SRC:.c=.o)
 
@@ -28,6 +28,7 @@ libc.a: $(OBJ)
 stdentry.o: $(OBJ2)
 	@echo "[Building Startup Library]"
 	cp -p startup/stdentry.o .
+	cp -p startup/procparm.o .
 
 .c.o:
 	@echo "[Compiling]" $<
@@ -38,10 +39,11 @@ stdentry.o: $(OBJ2)
 	@$(CC) -c $(CFLAGS) $< -o $@
 
 clean:
-	rm -f $(OBJ) $(OBJ2) libc.a stdentry.o ../lib/libc.a ../lib/stdentry.o
+	rm -f $(OBJ) $(OBJ2) libc.a procparm.o stdentry.o ../lib/libc.a ../lib/stdentry.o ../lib/procparm.o
 
 all: libc.a stdentry.o
 
 install:	libc.a stdentry.o
 		cp -p libc.a ../lib
 		cp -p stdentry.o ../lib
+		cp -p procparm.o ../lib
