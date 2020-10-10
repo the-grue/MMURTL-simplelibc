@@ -13,7 +13,7 @@ SRC =	ctype/isalnum.c ctype/isalpha.c ctype/iscntrl.c ctype/isdigit.c \
 	stdio/fgets.c stdio/ftell.c stdio/rewind.c stdio/fseek.c \
 	stdio/fread.c stdio/fwrite.c stdio/fputc.c string/strcmp.c \
 	string/strncmp.c string/strcpy.c string/strncpy.c string/strcat.c \
-	string/strncat.c string/strchr.c
+	string/strncat.c string/strchr.c fmt/print.c
 
 SRC2 =	startup/stdentry.c startup/procparm.c
 
