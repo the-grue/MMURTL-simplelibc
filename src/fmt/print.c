@@ -11,7 +11,7 @@
  the next arg(s) in the list from the passed in arg pointer.
  The number of chars written is returned (not incl \0).
 **************************************************************/
-long _formatout(char *outptr, char *fmt, va_list argptr)
+long _formatout(char *outptr, const char *fmt, va_list argptr)
 {
 char numstk[33], *ptr, justify, zero, minus, chr, us;
 unsigned long width, value, i, total, *value2, *value3;
@@ -172,7 +172,7 @@ unsigned long width, value, i, total, *value2, *value3;
     Formatted print to stdout
 *************************************/
 
-int printf(char *fmt, ...)
+int printf(const char *fmt, ...)
 {
 	va_list ap;
 	long total;
@@ -189,7 +189,7 @@ int printf(char *fmt, ...)
     Formatted print to string s
 *************************************/
 
-int sprintf(char *s, char *fmt, ...)
+int sprintf(char *s, const char *fmt, ...)
 {
 	va_list ap;
 	long total;
@@ -204,7 +204,7 @@ int sprintf(char *s, char *fmt, ...)
     Formatted print to a file
 *************************************/
 
-int fprintf(FILE *stream, char *fmt, ...)
+int fprintf(FILE *stream, const char *fmt, ...)
 {
 	va_list ap;
 	long total;

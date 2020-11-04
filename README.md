@@ -39,21 +39,25 @@ Implemented:
 	int puts(const char* s);  -> puts.c
 	FILE *fopen(const char *name, const char *mode); -> fopen.c
 	int rename(const char *oldname, const char *newname); -> rename.c
-	int remove(const char *name);
-	int fclose(FILE *stream);
-	int fgetc(FILE *stream);
-	char *fgets(char *s, int n, FILE *stream);
-	long ftell(FILE *stream);
-	void rewind(FILE *stream);
-	int fseek(FILE *stream, long offset, int origin);
-	size_t fread(void *ptr, size_t size, size_t nobj, FILE *stream);
-	size_t fwrite(const void *ptr, size_t size, size_t nobj, FILE *stream);
-	int fputc(int c, FILE *stream);
-
+	int remove(const char *name); -> remove.c
+	int fclose(FILE *stream); -> fclose.c
+	int fgetc(FILE *stream); -> fgetc.c
+	char *fgets(char *s, int n, FILE *stream); -> fgets.c
+	long ftell(FILE *stream); -> ftell.c
+	void rewind(FILE *stream); -> rewiind.c
+	int fseek(FILE *stream, long offset, int origin); -> fseek.c
+	size_t fread(void *ptr, size_t size, size_t nobj, FILE *stream); -> fread.c
+	size_t fwrite(const void *ptr, size_t size, size_t nobj, FILE *stream); -> fwrite.c
+	int fputc(int c, FILE *stream); -> fputc.c
+	int fprintf(FILE *stream, const char *format, ...); -> print.c
+	int printf(const char *format, ...); -> print.c
+	int sprintf(char *str, const char *format, ...); -> print.c
 
 <stdlib.h>
 
 	void exit(int status); -> exit.c
+	int rand(void); -> rand.c
+	void srand(unsigned int seed); -> srarnd.c
 
 <string.h>
 

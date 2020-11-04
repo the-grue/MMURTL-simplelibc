@@ -51,14 +51,8 @@ int fseek(FILE *stream, long offset, int origin);
 size_t fread(void *ptr, size_t size, size_t nobj, FILE *stream);
 size_t fwrite(const void *ptr, size_t size, size_t nobj, FILE *stream);
 int fputc(int c, FILE *stream);
-
-/*  Not yet implemented  */
-
-
-
-
-extern int printf(char *fmt, ...);
-extern int sprintf(char *s, char *fmt, ...);
-extern int fprintf(FILE *stream, char *fmt, ...);
+int printf(const char *format, ...);
+int sprintf(char *s, const char *format, ...);
+int fprintf(FILE *stream, const char *format, ...);
 
 #endif
