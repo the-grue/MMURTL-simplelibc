@@ -58,6 +58,9 @@ Implemented:
 	void exit(int status); -> exit.c
 	int rand(void); -> rand.c
 	void srand(unsigned int seed); -> srarnd.c
+	void abort(void); -> abort.c
+	int atoi(const char *s); -> atoi.c
+	long int atol(const char *s); -> atol.c
 
 <string.h>
 
@@ -70,5 +73,7 @@ Implemented:
 	char* strncat(char* s, const char* ct, int n); -> strncat.c
 	char* strchr(const char* cs, int c); -> strchr.c
 
-
+<signal.h>
+	void * signal(int sig, void (*handler)(int)); -> signal.c
+	int raise(int sig); -> raise.c
 
