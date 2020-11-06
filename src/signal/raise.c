@@ -2,11 +2,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void *SigTable[SIGNALS] = {0};
+SigFun *SigTable[SIGNALS] = {0};
 
 int raise(int sig)
 {	
-	void *s;
+	SigFun *s;
 
 	if (sig <= 0 || SIGNALS <= sig)
 		return (-1);	
@@ -24,8 +24,9 @@ int raise(int sig)
             *--p = sig % 10 + '0';
 		while ((sig /= 10) != 0);
 	
-    	fputs("terminating on signal #", stderr);
+    	fputs("Terminating on signal #", stderr);
 		fputs(p, stderr);
+		fputs("\r\n", stderr);
 	
     	exit(sig);
 	}

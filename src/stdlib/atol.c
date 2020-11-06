@@ -10,20 +10,20 @@ long int atol(const char *s)
     
     sign = 1;
     
-    switch (*s)
+    switch(*s)
     {
         case '-':
             sign = -1;
         case '+':
-        default:
             ++s;
+        default:
             break;
     }
     
     n = 0;
     
     while (isdigit(*s))
-        n = 10 * n + *s++ - '0';
+        n = 10 * n + (*s++ - '0');
     
     return (sign * n);
 }

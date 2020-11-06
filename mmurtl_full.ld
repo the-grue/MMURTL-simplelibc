@@ -1,6 +1,9 @@
 OUTPUT_FORMAT(binary)
 SECTIONS
 {
+	_dataaddr = 0x40002000;
+	_stack = 0x00001000;
+	_header = 0x37;
     . = 0x0000;
     .text :
     {
@@ -9,7 +12,7 @@ SECTIONS
 	BYTE(0x01);
 	BYTE(0x90);
 	LONG(0x0000000C);
-	LONG(0x00001000);
+	LONG(_stack);
 	LONG(__CEND__ - __CBEG__);
 	LONG(__DEND__ - __DBEG__);
 	BYTE(0x92);
@@ -29,7 +32,7 @@ SECTIONS
 	BYTE(0xB2);
 	LONG(__DEND__ - __DBEG__);
     }
-    .data 0x40002000 : AT ( ADDR (.text) + SIZEOF (.text) )
+    .data _dataaddr : AT ( ADDR (.text) + SIZEOF (.text) )
     {
 	__DBEG__ = .;
         *(.data);

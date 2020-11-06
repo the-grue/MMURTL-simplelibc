@@ -5,6 +5,8 @@
 #ifndef _SIGNAL
 #define _SIGNAL
 
+typedef void SigFun(int);
+
 #define SIG_ERR (void (*) ())-1
 #define SIG_DFL (void (*) ())0
 #define SIG_IGN (void (*) ())1
@@ -18,7 +20,7 @@
 
 #define SIGNALS 32      /* Plenty of room for growth  */
 
-void * signal(int sig, void (*handler)(int));
+void (*signal(int sig, void (*handler)(int)))(int);
 int raise(int sig);
 
 #endif
