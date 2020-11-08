@@ -65,6 +65,10 @@ Implemented:
 	void abort(void); -> abort.c
 	int atoi(const char *s); -> atoi.c
 	long int atol(const char *s); -> atol.c
+	void *calloc(size_t nobj, size_t size); -> calloc.c
+	void *malloc(size_t size); -> malloc.c
+	void free(void *p); -> free.c
+
 
 <string.h>
 

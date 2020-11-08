@@ -2,7 +2,7 @@
 #include <errno.h>
 #include <mmlib.h>
 
-extern unsigned int _heap;
+extern char * _heap;
 
 static void *pagebreak = (char *)&_heap;
 static void *maxcuralloc = (char *)&_heap;
@@ -24,7 +24,7 @@ caddr_t sbrk(int incr)
         /* See if we can satisfy the current request
          * out of memory already allocated */
 
-        if(((char *)pagebreak + incr) < (char *) maxcuralloc)
+        if(((char *)pagebreak + incr) < (char *) (maxcuralloc))
         {
                 pagebreak = ((char*) pagebreak) + incr;
                 return ptr;

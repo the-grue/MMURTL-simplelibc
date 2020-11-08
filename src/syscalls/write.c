@@ -3,7 +3,7 @@
 
 int write(int file, char *ptr, int len)
 {
-        int pdBytesRet;
+        int *pdBytesRet;
         int erc;
 
         /* Since MMURTL uses 1 for keyboard, remap writes */
@@ -12,7 +12,7 @@ int write(int file, char *ptr, int len)
         if(file == 1)
                 file = 2;
 
-        erc = WriteBytes(file, ptr, len, &pdBytesRet);
+        erc = WriteBytes(file, ptr, len, pdBytesRet);
 
         if(erc)
         {
@@ -20,5 +20,5 @@ int write(int file, char *ptr, int len)
                 return -1;
         }
         else
-                return pdBytesRet;
+                return *pdBytesRet;
 }
