@@ -82,3 +82,20 @@ Implemented:
 	void * signal(int sig, void (*handler)(int)); -> signal.c
 	int raise(int sig); -> raise.c
 
+UNIX like MMURTL System Calls
+
+<unistd.h> (<sys/types.h> <sys/fcntl.h> <sys/time.h> <sys/times.h> <sys/stat.h>)
+
+	int close(int file); -> close.c
+	int stat(const char *file, struct stat *st); -> stat.c
+	int getpid(void); -> getpid.c
+	int isatty(int file); -> isatty.c
+	int kill(int pid, int sig); -> kill.c
+	int link(char *old, char *new); -> link.c
+	int lseek(int file, int ptr, int dir); -> lseek.c
+	int open(const char *name, int flags, ...); -> open.c
+	int read(int file, char *ptr, int len); -> read.c
+	caddr_t sbrk(int incr); -> sbrk.c
+	int unlink(char *name); -> unlink.c
+	int write(int file, char *ptr, int len); -> write.c
+
