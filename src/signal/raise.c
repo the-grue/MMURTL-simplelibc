@@ -15,20 +15,20 @@ int raise(int sig)
 	    SigTable[sig] = SIG_DFL;
 	    (*s)(sig);
 	}
-    else if (s == SIG_DFL)
+	else if (s == SIG_DFL)
 	{	
-    	char ac[10], *p;
+    		char ac[10], *p;
 
 		*(p = &ac[(sizeof ac) - 1]) = '\0';
 		do 
-            *--p = sig % 10 + '0';
+            		*--p = sig % 10 + '0';
 		while ((sig /= 10) != 0);
 	
-    	fputs("Terminating on signal #", stderr);
+    		fputs("Terminating on signal #", stderr);
 		fputs(p, stderr);
 		fputs("\r\n", stderr);
 	
-    	exit(sig);
+    		exit(sig);
 	}
 	return (0);
 }

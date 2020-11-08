@@ -46,7 +46,7 @@ int handle, lmode, fcreate, fdiscard, erc, fappend;
 	if (fcreate)		/* try to create with archive bit set */
 		erc =  CreateFile((char *) name, strlen(name), 0x20);
 
-	if (erc == ErcDupName)
+	if (erc == ERCDUPNAME)
 		erc = 0;
 
 	if (!erc)

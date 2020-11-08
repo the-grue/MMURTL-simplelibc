@@ -15,7 +15,11 @@ SRC =	ctype/isalnum.c ctype/isalpha.c ctype/iscntrl.c ctype/isdigit.c \
 	string/strncmp.c string/strcpy.c string/strncpy.c string/strcat.c \
 	string/strncat.c string/strchr.c fmt/print.c stdlib/rand.c \
 	stdlib/srand.c stdlib/abort.c stdlib/atoi.c stdlib/atol.c \
-	signal/raise.c signal/signal.c
+	signal/raise.c signal/signal.c assert/assert.c syscalls/fixpfunc.c \
+	syscalls/sbrk.c syscalls/close.c syscalls/getpid.c syscalls/isatty.c \
+	syscalls/kill.c syscalls/open.c syscalls/lseek.c syscalls/read.c \
+	syscalls/write.c syscalls/link.c syscalls/unlink.c syscalls/stat.c
+
 
 SRC2 =	startup/stdentry.c startup/procparm.c
 

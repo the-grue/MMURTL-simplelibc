@@ -3,6 +3,10 @@ A simple libc for MMURTL
 
 Implemented:
 
+<assert.h>
+
+	void assert(int expression); -> assert.c
+
 <ctype.h>
 
 	int isalnum(int c);  -> isalnum.c
@@ -74,6 +78,7 @@ Implemented:
 	char* strchr(const char* cs, int c); -> strchr.c
 
 <signal.h>
+
 	void * signal(int sig, void (*handler)(int)); -> signal.c
 	int raise(int sig); -> raise.c
 
