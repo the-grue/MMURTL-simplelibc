@@ -68,6 +68,10 @@ Implemented:
 	void *calloc(size_t nobj, size_t size); -> calloc.c
 	void *malloc(size_t size); -> malloc.c
 	void free(void *p); -> free.c
+	int abs(int n); -> abs.c
+	long int labs(long int n); -> labs.c
+	div_t div(int num, int demon); -> div.c
+	ldiv_t ldiv(long int num, long int demon); -> ldiv.c
 
 
 <string.h>

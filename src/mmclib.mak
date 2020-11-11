@@ -19,7 +19,8 @@ SRC =	ctype/isalnum.c ctype/isalpha.c ctype/iscntrl.c ctype/isdigit.c \
 	syscalls/sbrk.c syscalls/close.c syscalls/getpid.c syscalls/isatty.c \
 	syscalls/kill.c syscalls/open.c syscalls/lseek.c syscalls/read.c \
 	syscalls/write.c syscalls/link.c syscalls/unlink.c syscalls/stat.c \
-	stdlib/malloc.c stdlib/calloc.c stdlib/free.c
+	stdlib/malloc.c stdlib/calloc.c stdlib/free.c stdlib/abs.c \
+	stdlib/labs.c stdlib/div.c stdlib/ldiv.c
 
 
 SRC2 =	startup/stdentry.c startup/procparm.c
